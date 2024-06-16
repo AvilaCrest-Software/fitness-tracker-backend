@@ -1,4 +1,4 @@
-package com.avilacrest.track_to_power.backend
+package com.avilacrest.track_to_power
 
 import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.boot.runApplication
