@@ -8,11 +8,11 @@
 		<version>3.3.0</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.avilacrest.track-to-power</groupId>
-	<artifactId>backend</artifactId>
+	<groupId>com.avilacrest</groupId>
+	<artifactId>track-to-power</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>Track To Power - Backend</name>
-	<description>Backend use cases</description>
+	<name>Track To Power</name>
+	<description>Track To Power's use cases</description>
 	<properties>
 		<java.version>17</java.version>
 		<kotlin.version>1.9.24</kotlin.version>
