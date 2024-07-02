@@ -11,13 +11,15 @@ class CorsFilterConfiguration() {
 
     @Bean
     fun corsFilter(): CorsFilter {
-        val source = UrlBasedCorsConfigurationSource()
         val config = CorsConfiguration()
         config.allowCredentials = true
         config.addAllowedOriginPattern("*")
         config.addAllowedHeader("*")
         config.addAllowedMethod("*")
+
+        val source = UrlBasedCorsConfigurationSource()
         source.registerCorsConfiguration("/**", config)
+
         return CorsFilter(source)
     }
 }
