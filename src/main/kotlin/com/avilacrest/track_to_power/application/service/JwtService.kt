@@ -1,5 +1,6 @@
 package com.avilacrest.track_to_power.application.service
 
+import com.avilacrest.track_to_power.domain.model.User
 import io.jsonwebtoken.Claims
 import io.jsonwebtoken.Jwts
 import io.jsonwebtoken.SignatureAlgorithm
@@ -29,8 +30,8 @@ class JwtService {
         return claimsResolver(claims)
     }
 
-    fun generateToken(userDetails: UserDetails): String {
-        return generateToken(emptyMap(), userDetails)
+    fun generateToken(user: User): String {
+        return generateToken(mapOf("user_id" to user.id), user)
     }
 
     fun generateToken(extraClaims: Map<String, Any>, userDetails: UserDetails): String {
