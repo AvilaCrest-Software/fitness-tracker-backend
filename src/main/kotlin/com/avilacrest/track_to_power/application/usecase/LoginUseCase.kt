@@ -24,11 +24,11 @@ class LoginUseCase(
             )
         )
 
-        val userDetails = userRepository.findByEmail(loginUseCaseInput.email)
+        val user = userRepository.findByEmail(loginUseCaseInput.email)
             ?: throw UsernameNotFoundException("User not found")
 
         return LoginUseCaseOutput(
-            token = jwtService.generateToken(userDetails),
+            token = jwtService.generateToken(user),
             expiresIn = jwtService.getExpirationTime()
         )
     }
